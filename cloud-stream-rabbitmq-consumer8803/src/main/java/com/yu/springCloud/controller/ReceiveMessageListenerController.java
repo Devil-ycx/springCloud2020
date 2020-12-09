@@ -19,7 +19,7 @@ public class ReceiveMessageListenerController {
     /**
      * StreamListener 注解, 监听队列, 用于消费者队列的消息接收
      *
-     * @param message
+     * @param message sink.input
      */
     @StreamListener(Sink.INPUT)
     public void input(Message<String> message) {

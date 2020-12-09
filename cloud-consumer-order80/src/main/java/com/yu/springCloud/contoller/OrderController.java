@@ -48,6 +48,11 @@ public class OrderController {
             return new CommonResult<>(444,"操作失败");
         }
     }
+
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin() {
+        return restTemplate.getForObject(PAYMENT_URL + "/payment/zipkin/", String.class);
+    }
     //使用自己的均衡负载算法时可用
 //    @GetMapping(value = "/consumer/payment/lb")
 //    public String getPaymentLB() {
